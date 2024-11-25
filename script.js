@@ -61,7 +61,11 @@ ScrollReveal().reveal('.case-studies', {
     distance: '100px',
     duration: 1200
 });
-
+ScrollReveal().reveal('.counters', {
+    origin: 'bottom',
+    distance: '100px',
+    duration: 1000
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,15 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let projectCount = 0;
     let caseStudyCount = 0;
 
-    const projectGoal = 10;
-    const caseStudyGoal = 5;
+    const projectGoal = 12;
+    const caseStudyGoal = 7;
 
     const incrementCounter = (counter, goal) => {
         let current = 0;
         const interval = setInterval(() => {
             counter.textContent = ++current;
             if (current === goal) clearInterval(interval);
-        }, 100); // Adjust speed
+        }, 200); // Adjust speed
     };
 
     incrementCounter(projectCounter, projectGoal);
